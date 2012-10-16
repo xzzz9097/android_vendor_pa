@@ -19,8 +19,8 @@ else
 fi
 
 if [ -z "$OUT" -o ! -d "$OUT" ]; then
-	echo "ERROR: $0 only works with a full build environment. $OUT should exist."
-	exit 1
+    echo "ERROR: $0 only works with a full build environment. $OUT should exist."
+    exit 1
 fi
 
 if [ "$TARGET_BUILD_TYPE" = "debug" ]; then
@@ -31,8 +31,8 @@ else
     OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-$TARGET_BUILD_VARIANT.$USER.zip
 fi
 if [ ! -f "$OTAPACKAGE" ]; then
-	echo "$OTAPACKAGE doesn't exist!";
-	exit 1
+    echo "$OTAPACKAGE doesn't exist!";
+    exit 1
 fi
 
 OPTICHARGER=$ANDROID_BUILD_TOP/vendor/pa/tools/opticharger
@@ -61,22 +61,22 @@ find ./ -name \*.apk | $XARGS $OPTICHARGER
 
 # Fix build.prop
 $SED -i \
-	-e '/ro\.kernel\.android\.checkjni/d' \
-	-e '/ro\.build\.type/s/eng/user/' \
-	$REPACK/ota/system/build.prop
+    -e '/ro\.kernel\.android\.checkjni/d' \
+    -e '/ro\.build\.type/s/eng/user/' \
+    $REPACK/ota/system/build.prop
 
 # Delete ParanoidAndroid specific files
 if [ -f $ANDROID_BUILD_TOP/vendor/pa/tools/squisher.rm ]; then
-	for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/pa/tools/squisher.rm`; do
-		rm -f $REPACK/ota/$RM_FILE
-	done
+    for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/pa/tools/squisher.rm`; do
+        rm -f $REPACK/ota/$RM_FILE
+    done
 fi
 
 # Delete target product specific files
 if [ -f $ANDROID_BUILD_TOP/vendor/pa/tools/$TARGET_PRODUCT-squisher.rm ]; then
-	for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/pa/tools/$TARGET_PRODUCT-squisher.rm`; do
-		rm -f $REPACK/ota/$RM_FILE
-	done
+    for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/pa/tools/$TARGET_PRODUCT-squisher.rm`; do
+        rm -f $REPACK/ota/$RM_FILE
+    done
 fi
 
 # Delete unnecessary binaries
@@ -87,22 +87,19 @@ rm -rf $REPACK/ota/recovery
 
 # Strip modules
 [ -d $REPACK/ota/system/lib/modules ] && \
-	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
+    find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
 # Determine what to name the new signed package
 if [ -z "$CYANOGEN_NIGHTLY" ]; then
-	PAVERSION=`grep 'ro.modversion=' $REPACK/ota/system/build.prop | sed -e 's/ro.modversion=//g'`
-	: ${PAVERSION:=nightly}
-	OUTFILE=$OUT/$PAVERSION.zip
-	echo PAVERSION: $PAVERSION
+    PAVERSION=`grep 'ro.modversion=' $REPACK/ota/system/build.prop | sed -e 's/ro.modversion=//g'`
+    : ${PAVERSION:=nightly}
+    OUTFILE=$OUT/$PAVERSION.zip
+    echo PAVERSION: $PAVERSION
 else
-	OUTFILE=$OUT/update-squished.zip
+    OUTFILE=$OUT/update-squished.zip
 fi
 
 # PA versioning
-( cd $REPACK/ota/system/etc/paranoid; echo com.paranoid.preferences.version=$PAVERSION >> backup.conf; )
-
-# Copy PA overlays
 ( cd $REPACK/ota/system/etc/paranoid; echo com.paranoid.preferences.version=$PAVERSION >> backup.conf; )
 
 # Pack it up and sign
@@ -112,9 +109,9 @@ echo
 printf "Signing package..."
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
 java -Xmx1024m \
-	-jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar \
-	-w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
-	$REPACK/update.zip $OUTFILE
+    -jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar \
+    -w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
+    $REPACK/update.zip $OUTFILE
 echo
 printf "Cleaning up..."
 rm -rf $REPACK
