@@ -13,6 +13,12 @@
         "revision":     "cm-10.2"
     },
     {
+        "remote":       "cm",
+        "repository":   "android_packages_apps_DSPManager",
+        "target_path":  "packages/apps/DSPManager",
+        "revision":     "cm-10.2"
+    },
+    {
         "remote":       "github",
         "account":      "ParanoidAndroid",
         "repository":   "proprietary_vendor_samsung",
