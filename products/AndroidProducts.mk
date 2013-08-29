@@ -1,6 +1,9 @@
 ifeq (pa_grouper,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_grouper.mk
 endif
+ifeq (pa_endeavoru,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_endeavoru.mk
+endif
 ifeq (pa_i9300,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9300.mk
 endif
@@ -91,18 +94,6 @@ endif
 ifeq (pa_jfltecri,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jfltecri.mk
 endif
-ifeq (pa_jfltevzw,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jfltevzw.mk
-endif
 ifeq (pa_hercules,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hercules.mk
-endif
-ifeq (pa_edison,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_edison.mk
-endif
-ifeq (pa_spyder,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_spyder.mk
-endif
-ifeq (pa_umts_spyder,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_umts_spyder.mk
 endif

@@ -1,4 +1,4 @@
-# ParanoidAndroid Extras
+# CyanogenMod Extras
 import /init.superuser.rc
 
 on init
@@ -36,6 +36,13 @@ on property:service.adb.tcp.port=5555
 on property:service.adb.tcp.port=-1
     stop adbd
     start adbd
+
+# Compcache - handle at boot
+service compcache /system/bin/handle_compcache
+    class main
+    user root
+    group root
+    oneshot
 
 # sysinit (/system/etc/init.d)
 service sysinit /system/bin/sysinit

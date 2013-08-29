@@ -67,6 +67,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Superuser
 PRODUCT_PACKAGES += \
+    Superuser \
     su
 
 # device common prebuilts
