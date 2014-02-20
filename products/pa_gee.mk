@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+# http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_jfltecri,$(TARGET_PRODUCT))
+ifeq (pa_gee,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
@@ -29,14 +29,15 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/jfltecri/full_jfltecri.mk)
+$(call inherit-product, device/lge/gee/full_gee.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_jfltecri
-PRODUCT_DEVICE := jfltecri
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SCH-R970C
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=jfltecri TARGET_DEVICE=jfltecri BUILD_FINGERPRINT="samsung/jfltecri/jfltecri:4.2.2/JDQ39/R970CVVUAME4:user/release-keys" PRIVATE_BUILD_DESC="jfltecri-user 4.2.2 JDQ39 R970CVVUAME4 release-keys"
+PRODUCT_NAME := pa_gee
+PRODUCT_DEVICE := gee
+PRODUCT_BRAND := LGE
+PRODUCT_MANUFACTURER := LGE
+PRODUCT_MODEL := Optimus G
+
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=gee BUILD_FINGERPRINT="lge/gee/gee:4.4.2/KOT49H/937116:user/release-keys" PRIVATE_BUILD_DESC="gee-user 4.4.2 KOT49H 937116 release-keys"
 
 endif

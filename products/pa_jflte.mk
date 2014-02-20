@@ -1,4 +1,4 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_d2att,$(TARGET_PRODUCT))
+ifeq (pa_jflte,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
@@ -29,18 +29,12 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/d2att/full_d2att.mk)
+$(call inherit-product, device/samsung/jflte/full_jflte.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_d2att
-PRODUCT_DEVICE := d2att
+PRODUCT_NAME := pa_jflte
+PRODUCT_DEVICE := jflte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SGH-I747
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=d2uc \
-    TARGET_DEVICE=d2att \
-    BUILD_FINGERPRINT="samsung/d2uc/d2att:4.1.1/JRO03L/I747UCDLK3:user/release-keys" \
-    PRIVATE_BUILD_DESC="d2uc-user 4.1.1 JRO03L I747UCDLK3 release-keys"
-
+PRODUCT_MODEL := jflte
 endif
