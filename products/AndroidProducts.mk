@@ -16,7 +16,7 @@ ifeq (pa_endeavoru,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_endeavoru.mk
 endif
 ifeq (pa_d2lte,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d2att.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d2lte.mk
 endif
 ifeq (pa_d800,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d800.mk
@@ -42,6 +42,9 @@ endif
 ifeq (pa_hercules,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hercules.mk
 endif
+ifeq (pa_hlte,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hlte.mk
+endif
 ifeq (pa_i605,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i605.mk
 endif
@@ -49,7 +52,7 @@ ifeq (pa_i9300,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9300.mk
 endif
 ifeq (pa_jflte,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflteatt.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflte.mk
 endif
 ifeq (pa_l900,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_l900.mk
@@ -59,6 +62,9 @@ ifeq (pa_ls980,$(TARGET_PRODUCT))
 endif
 ifeq (pa_m7,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m7.mk
+endif
+ifeq (pa_moto_msm8960dt,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_moto_msm8960dt.mk
 endif
 ifeq (pa_n7000,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_n7000.mk

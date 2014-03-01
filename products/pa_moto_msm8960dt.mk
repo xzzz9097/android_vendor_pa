@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_d2lte,$(TARGET_PRODUCT))
+ifeq (pa_moto_msm8960dt,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
@@ -29,16 +29,18 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/d2lte/full_d2lte.mk)
+$(call inherit-product, device/motorola/moto_msm8960dt/full_moto_msm8960dt.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_d2lte
-PRODUCT_DEVICE := d2lte
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := d2lte
+PRODUCT_DEVICE := moto_msm8960dt
+PRODUCT_NAME := pa_moto_msm8960dt
+PRODUCT_BRAND := motorola
+PRODUCT_MODEL := MOTOROLA MSM8960DT
+PRODUCT_MANUFACTURER := motorola
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=d2lte TARGET_DEVICE=d2lte
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=motorola \
+    TARGET_DEVICE=moto_msm8960dt
 
 endif

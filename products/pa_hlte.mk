@@ -1,4 +1,4 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,11 +13,13 @@
 # limitations under the License.
 
 # Check for target product
+ifeq (pa_hlte,$(TARGET_PRODUCT))
 
-ifeq (pa_yuga,$(TARGET_PRODUCT))
+# Define PA bootanimation size
+PARANOID_BOOTANIMATION_NAME := XHDPI
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := pa_xxhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
@@ -29,14 +31,13 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/sony/yuga/full_yuga.mk)
+$(call inherit-product, device/samsung/hlte/full_hlte.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := yuga
-PRODUCT_NAME := pa_yuga
-PRODUCT_BRAND := Sony
-PRODUCT_MODEL := Xperia Z
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C6603 BUILD_FINGERPRINT=Sony/C6603_1270-6697/C6603:4.2.2/10.3.A.0.423/WP5_rg:user/release-keys PRIVATE_BUILD_DESC="C6603-user 4.2.2 10.3.A.0.423 WP5_rg test-keys"
-
+# Override AOSP build properties
+PRODUCT_NAME := pa_hlte
+PRODUCT_DEVICE := hlte
+PRODUCT_BRAND := Samsung
+PRODUCT_MODEL := SM-N9005
+PRODUCT_MANUFACTURER := Samsung
 endif
+
