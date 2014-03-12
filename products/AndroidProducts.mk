@@ -51,6 +51,9 @@ endif
 ifeq (pa_d855,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d855.mk
 endif
+ifeq (pa_dlx,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_dlx.mk
+endif
 ifeq (pa_edison,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_edison.mk
 endif
