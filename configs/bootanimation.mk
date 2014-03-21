@@ -15,9 +15,14 @@
 
 # Add PA bootanimation based on xxhdpi xhdpi hdpi resolution
 
+# PA TVDPI Devices
+ifneq ($(filter pa_n5110,$(TARGET_PRODUCT)),)
+    PRODUCT_COPY_FILES += \
+        vendor/pa/prebuilt/bootanimation/1920x1200.zip:system/media/bootanimation.zip
+endif
 
 # PA XXHDPI Devices
-ifneq ($(filter pa_d800 pa_d801 pa_d802 pa_d803 pa_dlx pa_hlte pa_i9500 pa_jflte pa_ls980 pa_m7 pa_vs980 pa_yuga,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_d800 pa_d801 pa_d802 pa_d803 pa_dlx pa_hlte pa_i9500 pa_jflte pa_ls980 pa_m7 pa_odin pa_vs980 pa_yuga,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/1920x1080.zip:system/media/bootanimation.zip
 endif
