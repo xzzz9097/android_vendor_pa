@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-# Add PA bootanimation based on xxhdpi xhdpi hdpi resolution
+# Add PA bootanimation based on xxhdpi xhdpi hdpi tvdpi resolution
 
 # PA TVDPI Devices
 ifneq ($(filter pa_n5110,$(TARGET_PRODUCT)),)
@@ -34,7 +34,13 @@ ifneq ($(filter pa_endeavoru pa_moto_msm8960 pa_moto_msm8960dt pa_d2lte pa_gee p
 endif
 
 # PA HDPI Devices
-ifneq ($(filter pa_galaxysmtd,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_a510 pa_a700 pa_galaxysmtd,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/800x480.zip:system/media/bootanimation.zip
+endif
+
+# PA TVDPI Devices
+ifneq ($(filter pa_n5110 pa_n5100,$(TARGET_PRODUCT)),)
+    PRODUCT_COPY_FILES += \
+        vendor/pa/prebuilt/bootanimation/1920x1200.zip:system/media/bootanimation.zip
 endif
