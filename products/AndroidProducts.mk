@@ -39,8 +39,14 @@ endif
 ifeq (pa_dlx,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_dlx.mk
 endif
+ifeq (pa_enrc2b,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_enrc2b.mk
+endif
 ifeq (pa_evita,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_evita.mk
+endif
+ifeq (pa_falcon,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_falcon.mk
 endif
 ifeq (pa_flo,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_flo.mk
@@ -57,6 +63,9 @@ endif
 ifeq (pa_hercules,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hercules.mk
 endif
+ifeq (pa_hikari,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hikari.mk
+endif
 ifeq (pa_hlte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hlte.mk
 endif
@@ -72,6 +81,9 @@ endif
 ifeq (pa_i9500,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9500.mk
 endif
+ifeq (pa_jem,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jem.mk
+endif
 ifeq (pa_jflte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflte.mk
 endif
@@ -86,6 +98,12 @@ ifeq (pa_m7,$(TARGET_PRODUCT))
 endif
 ifeq (pa_meliusltexx,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_meliusltexx.mk
+endif
+ifeq (pa_melius3gxx,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_melius3gxx.mk
+endif
+ifeq (pa_mint,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_mint.mk
 endif
 ifeq (pa_moto_msm8960,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_moto_msm8960.mk
@@ -105,6 +123,9 @@ endif
 ifeq (pa_n7100,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_n7100.mk
 endif
+ifeq (pa_nozomi,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_nozomi.mk
+endif
 ifeq (pa_odin,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_odin.mk
 endif
@@ -113,6 +134,9 @@ ifeq (pa_p880,$(TARGET_PRODUCT))
 endif
 ifeq (pa_skyrocket,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_skyrocket.mk
+endif
+ifeq (pa_tate,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_tate.mk
 endif
 ifeq (pa_togari,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_togari.mk
