@@ -39,6 +39,6 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := melius3gxx
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=melius3gxx BUILD_FINGERPRINT="samsung/melius3gxx/melius3g:4.2.2/JDQ39/I9200XXUAMEA:user/release-keys" PRIVATE_BUILD_DESC="melius3gxx-user 4.2.2 JDQ39 I9200XXUAMEA release-keys" BUILD_NUMBER=I9200XXUAMEA TARGET_DEVICE=melius3gxx
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=melius3gxx BUILD_FINGERPRINT="samsung/melius3gxx/melius3g:4.2.2/JDQ39/I9200XXUAMEA:user/release-keys" PRIVATE_BUILD_DESC="melius3gxx-user 4.2.2 JDQ39 I9200XXUAMEA release-keys" BUILD_NUMBER=I9200XXUAMEA
 
 endif

@@ -35,4 +35,7 @@ PRODUCT_BRAND := google
 PRODUCT_MODEL := Amazon Tate
 PRODUCT_MANUFACTURER := android
 
+# Set build fingerprint / ID / Product Name ect.
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=tate TARGET_DEVICE=tate
+
 endif
