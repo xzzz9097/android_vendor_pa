@@ -17,7 +17,7 @@
 
 
 # PA XXHDPI Devices
-ifneq ($(filter pa_d800 pa_d801 pa_d802 pa_d803 pa_dlx pa_hlte pa_honami pa_i9500 pa_jflte pa_ls980 pa_m7 pa_odin pa_vs980 pa_yuga,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_d800 pa_d801 pa_d802 pa_d803 pa_dlx pa_hlte pa_honami pa_find7a pa_i9500 pa_jflte pa_ls980 pa_m7 pa_m7spr pa_m7vzw pa_odin pa_vs980 pa_yuga,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/1920x1080.zip:system/media/bootanimation.zip
 endif
@@ -29,7 +29,7 @@ ifneq ($(filter pa_endeavoru pa_edison pa_maserasti pa_spyder pa_targa pa_umts_s
 endif
 
 # PA HDPI Devices
-ifneq ($(filter pa_galaxysmtd pa_i9100,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_galaxysmtd pa_i9100 pa_serrano3gxx pa_serranoltexx,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/800x480.zip:system/media/bootanimation.zip
 endif

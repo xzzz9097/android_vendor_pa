@@ -14,10 +14,10 @@
 
 # Check for target product
 
-ifeq (pa_ls980,$(TARGET_PRODUCT))
+ifeq (pa_m4,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_g2
+OVERLAY_TARGET := pa_xhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
@@ -29,18 +29,15 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/lge/ls980/ls980.mk)
+$(call inherit-product, device/htc/m4/full_m4.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := ls980
-PRODUCT_NAME := pa_ls980
-PRODUCT_BRAND := LGE
-PRODUCT_MODEL := LG-LS980
-PRODUCT_MANUFACTURER := lge
+PRODUCT_DEVICE := m4
+PRODUCT_NAME := pa_m4
+PRODUCT_BRAND := HTC
+PRODUCT_MODEL := One Mini
+PRODUCT_MANUFACTURER := HTC
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=ls980 \
-    BUILD_FINGERPRINT=lge/g2_spr_us/g2:4.4.2/KOT49I.LS980ZVC/LS980ZVC.1394331950:user/release-keys \
-    PRIVATE_BUILD_DESC="g2_spr_us-user 4.4.2 KOT49I.LS980ZVC LS980ZVC.1394331950 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m4 BUILD_FINGERPRINT="htc/htc_europe/m4:4.4.2/KOT49H/304638.4:user/release-keys" PRIVATE_BUILD_DESC="3.10.401.4 CL304638 release-keys"
 
 endif

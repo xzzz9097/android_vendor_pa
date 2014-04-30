@@ -1,4 +1,4 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,10 @@
 
 # Check for target product
 
-ifeq (pa_ls980,$(TARGET_PRODUCT))
+ifeq (pa_find7a,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_g2
+OVERLAY_TARGET := pa_xxhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
@@ -29,18 +29,16 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/lge/ls980/ls980.mk)
+$(call inherit-product, device/oppo/find7a/full_find7a.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := ls980
-PRODUCT_NAME := pa_ls980
-PRODUCT_BRAND := LGE
-PRODUCT_MODEL := LG-LS980
-PRODUCT_MANUFACTURER := lge
+# Override AOSP build properties
+PRODUCT_NAME := pa_find7a
+PRODUCT_DEVICE := find7a
+PRODUCT_BRAND := Oppo
+PRODUCT_MODEL := Find7a
+PRODUCT_MANUFACTURER := Oppo
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=ls980 \
-    BUILD_FINGERPRINT=lge/g2_spr_us/g2:4.4.2/KOT49I.LS980ZVC/LS980ZVC.1394331950:user/release-keys \
-    PRIVATE_BUILD_DESC="g2_spr_us-user 4.4.2 KOT49I.LS980ZVC LS980ZVC.1394331950 release-keys"
+# Set build fingerprint / ID / Product Name ect.
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=find7a TARGET_DEVICE=find7a
 
 endif

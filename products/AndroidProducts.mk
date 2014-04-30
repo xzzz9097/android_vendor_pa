@@ -51,6 +51,9 @@ endif
 ifeq (pa_falcon,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_falcon.mk
 endif
+ifeq (pa_find7a,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_find7a.mk
+endif
 ifeq (pa_flo,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_flo.mk
 endif
@@ -102,8 +105,17 @@ endif
 ifeq (pa_ls980,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ls980.mk
 endif
+ifeq (pa_m4,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m4.mk
+endif
 ifeq (pa_m7,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m7.mk
+endif
+ifeq (pa_m7spr,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m7spr.mk
+endif
+ifeq (pa_m7vzw,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m7vzw.mk
 endif
 ifeq (pa_maserati,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_maserati.mk
@@ -144,6 +156,12 @@ endif
 ifeq (pa_p880,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p880.mk
 endif
+ifeq (pa_serranoltexx,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_serranoltexx.mk
+endif
+ifeq (pa_serrano3gxx,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_serrano3gxx.mk
+endif
 ifeq (pa_skyrocket,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_skyrocket.mk
 endif
@@ -155,6 +173,9 @@ ifeq (pa_targa,$(TARGET_PRODUCT))
 endif
 ifeq (pa_tate,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_tate.mk
+endif
+ifeq (pa_tf201,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_tf201.mk
 endif
 ifeq (pa_togari,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_togari.mk
