@@ -14,10 +14,10 @@
 
 # Check for target product
 
-ifeq (pa_d802,$(TARGET_PRODUCT))
+ifeq (pa_ville,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_g2
+OVERLAY_TARGET := pa_hdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
@@ -29,15 +29,16 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/lge/d802/d802.mk)
+$(call inherit-product, device/htc/ville/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := d802
-PRODUCT_NAME := pa_d802
-PRODUCT_BRAND := LGE
-PRODUCT_MODEL := LG-D802
-PRODUCT_MANUFACTURER := lge
+PRODUCT_DEVICE := ville
+PRODUCT_NAME := pa_ville
+PRODUCT_BRAND := HTC
+PRODUCT_MODEL := One S
+PRODUCT_MANUFACTURER := HTC
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=d802 BUILD_FINGERPRINT=lge/g2_open_com/g2:4.4.2/KOT49I.D80220a/D80220a.1392133741:user/release-keys PRIVATE_BUILD_DESC="g2_open_com-user 4.4.2 KOT49I.D80220a D80220a.1392133741 release-keys"
-
+# Set build fingerprint / ID / Product Name etc.
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_ville BUILD_FINGERPRINT=cingular_us/ville/ville:4.1.1/JRO03C/131981.6:user/release-keys PRIVATE_BUILD_DESC="3.18.502.6 CL131981 release-keys" BUILD_NUMBER=79936
+    
 endif
