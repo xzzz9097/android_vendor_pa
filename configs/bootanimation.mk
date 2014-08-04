@@ -17,13 +17,13 @@
 
 
 # PA XXHDPI Devices
-ifneq ($(filter pa_bacon pa_d800 pa_d801 pa_d802 pa_d803 pa_dlx pa_hlte pa_honami pa_find5 pa_find7 pa_i9500 pa_jflte pa_ls980 pa_m7 pa_m7spr pa_m7vzw pa_m8 pa_n1 pa_odin pa_vs980 pa_yuga,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_bacon pa_d800 pa_d801 pa_d802 pa_d803 pa_dlx pa_hlte pa_honami pa_find5 pa_find7 pa_find7u pa_i9500 pa_jflte pa_ls980 pa_m7 pa_m7spr pa_m7vzw pa_m8 pa_n1 pa_odin pa_sirius pa_vs980 pa_yuga,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/1920x1080.zip:system/media/bootanimation.zip
 endif
 
 # PA XHDPI Devices
-ifneq ($(filter pa_endeavoru pa_edison pa_maserasti pa_spyder pa_targa pa_umts_spyder pa_hikari pa_nozomi pa_tate pa_jem pa_jemlte pa_falcon pa_enrc2b pa_mint pa_melius3gxx pa_meliusltexx pa_evita pa_moto_msm8960 pa_moto_msm8960dt pa_d2lte pa_gee pa_geeb pa_hercules pa_i605 pa_i9300 pa_l900 pa_n7000 pa_n7100 pa_p880 pa_skyrocket pa_togari pa_v500,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_endeavoru pa_amami pa_edison pa_maserasti pa_spyder pa_targa pa_umts_spyder pa_hikari pa_nozomi pa_tate pa_jem pa_jemlte pa_falcon pa_enrc2b pa_mint pa_melius3gxx pa_meliusltexx pa_evita pa_moto_msm8960 pa_moto_msm8960dt pa_d2lte pa_gee pa_geeb pa_hercules pa_i605 pa_i9300 pa_l900 pa_m4 pa_n7000 pa_n7100 pa_p880 pa_skyrocket pa_tf201 pa_togari pa_v500,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/1280x720.zip:system/media/bootanimation.zip
 endif

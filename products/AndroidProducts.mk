@@ -21,6 +21,9 @@ endif
 ifeq (pa_a700,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_a700.mk
 endif
+ifeq (pa_amami,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_amami.mk
+endif
 ifeq (pa_d2lte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d2lte.mk
 endif
@@ -59,6 +62,9 @@ ifeq (pa_find5,$(TARGET_PRODUCT))
 endif
 ifeq (pa_find7,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_find7.mk
+endif
+ifeq (pa_find7u,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_find7u.mk
 endif
 ifeq (pa_flo,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_flo.mk
@@ -188,6 +194,9 @@ ifeq (pa_serrano3gxx,$(TARGET_PRODUCT))
 endif
 ifeq (pa_serranoltexx,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_serranoltexx.mk
+endif
+ifeq (pa_sirius,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_sirius.mk
 endif
 ifeq (pa_skyrocket,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_skyrocket.mk
