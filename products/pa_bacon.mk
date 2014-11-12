@@ -35,10 +35,15 @@ $(call inherit-product, device/oneplus/bacon/full_bacon.mk)
 PRODUCT_NAME := pa_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_BRAND := Oneplus
-PRODUCT_MODEL := One
-PRODUCT_MANUFACTURER := Oneplus
+PRODUCT_MODEL := A0001
+PRODUCT_MANUFACTURER := OnePlus
+
+TARGET_VENDOR_PRODUCT_NAME := bacon
+TARGET_VENDOR_DEVICE_NAME := A0001
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=bacon TARGET_DEVICE=bacon
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=bacon TARGET_DEVICE=A0001
+
+PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 endif
