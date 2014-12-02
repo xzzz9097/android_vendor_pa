@@ -46,6 +46,7 @@ PRODUCT_PACKAGES += \
 
 # Extra tools
 PRODUCT_PACKAGES += \
+    busybox \
     e2fsck \
     mount.exfat \
     fsck.exfat \
