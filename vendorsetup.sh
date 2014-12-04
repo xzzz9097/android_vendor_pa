@@ -7,6 +7,7 @@ add_lunch_combo pa_d800-userdebug
 add_lunch_combo pa_d801-userdebug
 add_lunch_combo pa_d802-userdebug
 add_lunch_combo pa_d803-userdebug
+add_lunch_combo pa_d850-userdebug
 add_lunch_combo pa_d851-userdebug
 add_lunch_combo pa_d852-userdebug
 add_lunch_combo pa_edison-userdebug
