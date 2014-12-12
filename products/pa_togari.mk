@@ -1,4 +1,4 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,12 +13,12 @@
 # limitations under the License.
 
 # Check for target product
-
 ifeq (pa_togari,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
 
+# Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
@@ -36,9 +36,6 @@ PRODUCT_DEVICE := togari
 PRODUCT_BRAND := sony
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := Xperia Z Ultra
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=C6833 \
-    BUILD_FINGERPRINT=Sony/C6833_1274-8613/C6833:4.2.2/14.1.B.1.526/8bl_jw:user/release-keys \
-    PRIVATE_BUILD_DESC="C6833-user 4.2.2 14.1.B.1.526 8bl_jw test-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C6833 TARGET_DEVICE=togari BUILD_FINGERPRINT=Sony/C6833/C6833:4.4.4/14.4.A.0.133/ev__jQ:user/release-keys PRIVATE_BUILD_DESC="C6833-user 4.4.4 14.4.A.0.133 ev__jQ release-keys"
 
 endif
