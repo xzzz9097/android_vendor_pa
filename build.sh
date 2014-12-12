@@ -94,6 +94,9 @@ if [ $ARCH = "64" ]; then
 
   #Use Prebuilt Chromium
   export USE_PREBUILT_CHROMIUM=1
+  
+  #Generate Changelog
+  export CHANGELOG=true
 
   # Fetch latest sources
   if [ "$SYNC" == "true" ]; then
