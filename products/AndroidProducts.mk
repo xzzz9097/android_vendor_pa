@@ -48,6 +48,9 @@ endif
 ifeq (pa_d852,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d852.mk
 endif
+ifeq (pa_d855,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d855.mk
+endif
 ifeq (pa_edison,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_edison.mk
 endif
@@ -101,6 +104,9 @@ ifeq (pa_jflte,$(TARGET_PRODUCT))
 endif
 ifeq (pa_ls980,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ls980.mk
+endif
+ifeq (pa_ls990,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ls990.mk
 endif
 ifeq (pa_m4,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m4.mk
@@ -182,6 +188,9 @@ ifeq (pa_ville,$(TARGET_PRODUCT))
 endif
 ifeq (pa_vs980,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_vs980.mk
+endif
+ifeq (pa_vs985,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_vs985.mk
 endif
 ifeq (pa_yuga,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_yuga.mk
