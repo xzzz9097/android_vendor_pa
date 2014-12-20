@@ -57,6 +57,9 @@ endif
 ifeq (pa_evita,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_evita.mk
 endif
+ifeq (pa_f320,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_f320.mk
+endif
 ifeq (pa_falcon,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_falcon.mk
 endif
