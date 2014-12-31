@@ -19,9 +19,6 @@ ifeq (pa_find7,$(TARGET_PRODUCT))
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xxhdpi
 
-# Build paprefs from sources
-PREFS_FROM_SOURCE ?= false
-
 # Inherit telephony common stuff
 $(call inherit-product, vendor/pa/configs/telephony.mk)
 
@@ -38,15 +35,16 @@ PRODUCT_NAME := pa_find7
 PRODUCT_DEVICE := find7
 PRODUCT_BRAND := oppo
 PRODUCT_MANUFACTURER := OPPO
-PRODUCT_MODEL := X9076
+PRODUCT_MODEL := X9006
 
 TARGET_VENDOR_PRODUCT_NAME := find7
-TARGET_VENDOR_DEVICE_NAME := X9076
+TARGET_VENDOR_DEVICE_NAME := X9006
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=find7 TARGET_DEVICE=find7
 
 ## Use the latest approved GMS identifiers unless running a signed build
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=4.4.2/KVT49L/1390465867:user/release-keys PRIVATE_BUILD_DESC="msm8974-user 4.4.2 KVT49L eng.root.20141017.144947 release-keys"
+
 
 endif

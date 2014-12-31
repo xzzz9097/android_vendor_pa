@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_find7u,$(TARGET_PRODUCT))
+ifeq (pa_find7,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xxhdpi
@@ -29,20 +29,24 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/oppo/find7u/full_find7u.mk)
+$(call inherit-product, device/oppo/find7s/full_find7s.mk)
+
+PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_find7u
-PRODUCT_DEVICE := find7u
-PRODUCT_BRAND := OPPO
+PRODUCT_NAME := pa_find7s
+PRODUCT_DEVICE := find7s
+PRODUCT_BRAND := oppo
 PRODUCT_MANUFACTURER := OPPO
-PRODUCT_MODEL := find7
+PRODUCT_MODEL := X9076
+
+TARGET_VENDOR_PRODUCT_NAME := find7s
+TARGET_VENDOR_DEVICE_NAME := X9076
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_PRODUCT=find7u \
-    TARGET_DEVICE=find7u \
-    BUILD_FINGERPRINT="4.3/JLS36C/1390465867:user/release-keys" \
-    PRIVATE_BUILD_DESC="msm8974-user 4.3 JLS36C eng.root.20140510.152835 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=find7s TARGET_DEVICE=find7s
+
+## Use the latest approved GMS identifiers unless running a signed build
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=4.4.2/KVT49L/1390465867:user/release-keys PRIVATE_BUILD_DESC="msm8974-user 4.4.2 KVT49L eng.root.20141017.144947 release-keys"
 
 endif
