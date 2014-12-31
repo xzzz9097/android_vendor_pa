@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_find7,$(TARGET_PRODUCT))
+ifeq (pa_find7s,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xxhdpi
