@@ -16,8 +16,8 @@ add_lunch_combo pa_evita-userdebug
 add_lunch_combo pa_f320-userdebug
 add_lunch_combo pa_falcon-userdebug
 add_lunch_combo pa_find5-userdebug
-add_lunch_combo pa_find7-user
-add_lunch_combo pa_find7s-user
+add_lunch_combo pa_find7-userdebug
+add_lunch_combo pa_find7s-userdebug
 add_lunch_combo pa_dlx-userdebug
 add_lunch_combo pa_galaxysmtd-userdebug
 add_lunch_combo pa_gee-userdebug
