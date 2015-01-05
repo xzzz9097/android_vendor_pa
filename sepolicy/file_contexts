@@ -17,3 +17,6 @@
 
 # Expansion of these hooks is a bit unconventional
 /cache/com.cyanogenmod.keyhandler.dex   u:object_r:dalvikcache_data_file:s0
+
+# Themes
+/data/system/theme(/.*)?  u:object_r:theme_data_file:s0
