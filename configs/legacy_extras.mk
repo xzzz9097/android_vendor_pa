@@ -42,7 +42,8 @@ PRODUCT_PACKAGES += \
 
 # Extra packages
 PRODUCT_PACKAGES += \
-    BluetoothExt
+    BluetoothExt \
+    Eleven
 
 # Extra tools
 PRODUCT_PACKAGES += \
