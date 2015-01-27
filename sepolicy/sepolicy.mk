@@ -7,11 +7,15 @@ BOARD_SEPOLICY_DIRS += \
     vendor/pa/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+    app.te \
+    bootanim.te \
+    drmserver.te \
     file.te \
     file_contexts \
     genfs_contexts \
     property_contexts \
     seapp_contexts \
+    service_contexts \
     auditd.te \
     adbd.te \
     healthd.te \
@@ -24,4 +28,5 @@ BOARD_SEPOLICY_UNION += \
     system.te \
     ueventd.te \
     vold.te \
+    zygote.te \
     mac_permissions.xml
