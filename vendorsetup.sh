@@ -12,6 +12,7 @@ add_lunch_combo pa_d851-userdebug
 add_lunch_combo pa_d852-userdebug
 add_lunch_combo pa_d855-userdebug
 add_lunch_combo pa_edison-userdebug
+add_lunch_combo pa_endeavoru-userdebug
 add_lunch_combo pa_evita-userdebug
 add_lunch_combo pa_f320-userdebug
 add_lunch_combo pa_falcon-userdebug
