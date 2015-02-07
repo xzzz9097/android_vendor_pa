@@ -16,15 +16,6 @@
 #    Busybox \
 #    Lightbulb
 
-# Source or prebuilt PA-prefs logic
-#ifneq ($(PREFS_FROM_SOURCE),true)
-#    PRODUCT_COPY_FILES += \
-#        vendor/pa/prebuilt/apk/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk
-#else
-#    # Build paprefs from sources
-#    PRODUCT_PACKAGES += \
-#        ParanoidPreferences
-#endif
 
 # Include ParanoidOTA
 ifneq ($(NO_OTA_BUILD),true)
