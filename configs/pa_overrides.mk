@@ -12,10 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# PRODUCT_PACKAGES += \
-#    Busybox \
-#    Lightbulb
-
+PRODUCT_PACKAGES += \
+    busybox
 
 # Include ParanoidOTA
 ifneq ($(NO_OTA_BUILD),true)
