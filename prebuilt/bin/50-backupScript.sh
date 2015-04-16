@@ -1,7 +1,7 @@
 #!/sbin/sh
 #
-# During a upgrade, this script backs up /system/etc/hosts,
-# This script will also backup and restore your gapps and other things you add.
+# /system/addon.d/50-cm.sh
+# During a ROM upgrade, this script backs up /system/etc/hosts,
 # /system is formatted and reinstalled, then the file is restored.
 #
 
@@ -9,8 +9,16 @@
 
 list_files() {
 cat <<EOF
-etc/hosts
+etc/paranoid/properties.conf
 EOF
+}
+
+check_prereq() {
+export V=  grep revision system/etc/paranoid/properties.conf | cut -c11
+if ( ! grep -q "^ro.papref.revision=$V" /system/build.prop ); then
+  echo "Not backing up files from incompatible version."
+  exit 127
+fi
 }
 
 case "$1" in

@@ -28,11 +28,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/$(VENDOR)/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-#Gapps backup script
-PRODUCT_COPY_FILES += \
-    vendor/$(VENDOR)/prebuilt/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh \
-    vendor/$(VENDOR)/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/$(VENDOR)/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh
+# Gapps backup script
+# PRODUCT_COPY_FILES += \
+#    vendor/$(VENDOR)/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+#    vendor/$(VENDOR)/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+#    vendor/$(VENDOR)/prebuilt/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
