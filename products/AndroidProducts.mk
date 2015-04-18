@@ -12,20 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (pa_amami,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_amami.mk
-endif
-ifeq (pa_aries,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_aries.mk
-endif
-ifeq (pa_d2lte,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d2lte.mk
-endif
 ifeq (pa_bacon,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_bacon.mk
-endif
-ifeq (pa_condor,$(TARGET_PRODUCT))
-	PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_condor.mk
 endif
 ifeq (pa_d800,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d800.mk
@@ -54,9 +42,6 @@ endif
 ifeq (pa_dlx,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_dlx.mk
 endif
-ifeq (pa_edison,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_edison.mk
-endif
 ifeq (pa_endeavoru,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_endeavoru.mk
 endif
@@ -78,38 +63,11 @@ endif
 ifeq (pa_find7s,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_find7s.mk
 endif
-ifeq (pa_galaxysmtd,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_galaxysmtd.mk
-endif
-ifeq (pa_gee,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_gee.mk
-endif
-ifeq (pa_geeb,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_geeb.mk
-endif
 ifeq (pa_hercules,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hercules.mk
 endif
-ifeq (pa_hlte,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hlte.mk
-endif
 ifeq (pa_honami,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_honami.mk
-endif
-ifeq (pa_i9100,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9100.mk
-endif
-ifeq (pa_i9100g,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9100g.mk
-endif
-ifeq (pa_i9300,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9300.mk
-endif
-ifeq (pa_i9500,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_i9500.mk
-endif
-ifeq (pa_jflte,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_jflte.mk
 endif
 ifeq (pa_ls980,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ls980.mk
@@ -117,23 +75,8 @@ endif
 ifeq (pa_ls990,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ls990.mk
 endif
-ifeq (pa_m4,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m4.mk
-endif
-ifeq (pa_m7,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m7.mk
-endif
-ifeq (pa_m7spr,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m7spr.mk
-endif
-ifeq (pa_m7vzw,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m7vzw.mk
-endif
 ifeq (pa_m8,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_m8.mk
-endif
-ifeq (pa_maserati,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_maserati.mk
 endif
 ifeq (pa_moto_msm8960,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_moto_msm8960.mk
@@ -153,12 +96,6 @@ endif
 ifeq (pa_n5120,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_n5120.mk
 endif
-ifeq (pa_n7000,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_n7000.mk
-endif
-ifeq (pa_n7100,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_n7100.mk
-endif
 ifeq (pa_nozomi,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_nozomi.mk
 endif
@@ -171,29 +108,14 @@ endif
 ifeq (pa_p3110,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p3110.mk
 endif
-ifeq (pa_sirius,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_sirius.mk
-endif
 ifeq (pa_skyrocket,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_skyrocket.mk
-endif
-ifeq (pa_spyder,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_spyder.mk
 endif
 ifeq (pa_taoshan,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_taoshan.mk
 endif
-ifeq (pa_targa,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_targa.mk
-endif
 ifeq (pa_togari,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_togari.mk
-endif
-ifeq (pa_umts_spyder,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_umts_spyder.mk
-endif
-ifeq (pa_ville,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ville.mk
 endif
 ifeq (pa_vs980,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_vs980.mk

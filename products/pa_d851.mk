@@ -25,6 +25,9 @@ PREFS_FROM_SOURCE ?= false
 # Inherit telephony common stuff
 $(call inherit-product, vendor/pa/configs/telephony.mk)
 
+# Overlays
+PRODUCT_PACKAGE_OVERLAYS += device/lge/d851/overlay
+
 # Include AOSPA common configuration
 include vendor/pa/main.mk
 
