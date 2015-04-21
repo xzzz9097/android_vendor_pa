@@ -57,6 +57,7 @@ add_lunch_combo pa_spyder-userdebug
 add_lunch_combo pa_taoshan-userdebug
 add_lunch_combo pa_targa-userdebug
 add_lunch_combo pa_togari-userdebug
+add_lunch_combo pa_tomato-userdebug
 add_lunch_combo pa_umts_spyder-userdebug
 add_lunch_combo pa_ville-userdebug
 add_lunch_combo pa_vs980-userdebug
