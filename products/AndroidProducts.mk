@@ -106,6 +106,9 @@ ifeq (pa_p3110,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p3110.mk
 endif
 ifeq (pa_skyrocket,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_sirius.mk
+endif
+ifeq (pa_skyrocket,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_skyrocket.mk
 endif
 ifeq (pa_taoshan,$(TARGET_PRODUCT))
