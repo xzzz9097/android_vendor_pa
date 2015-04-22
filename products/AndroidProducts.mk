@@ -114,7 +114,7 @@ endif
 ifeq (pa_togari,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_togari.mk
 endif
-ifeq (pa_taoshan,$(TARGET_PRODUCT))
+ifeq (pa_tomato,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_tomato.mk
 endif
 ifeq (pa_vs980,$(TARGET_PRODUCT))
