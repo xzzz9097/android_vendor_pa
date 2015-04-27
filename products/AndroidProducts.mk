@@ -114,6 +114,9 @@ endif
 ifeq (pa_taoshan,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_taoshan.mk
 endif
+ifeq (pa_titan,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_titan.mk
+endif
 ifeq (pa_togari,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_togari.mk
 endif
