@@ -17,7 +17,7 @@
 ifeq (pa_titan,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := pa_xxhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
