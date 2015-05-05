@@ -13,11 +13,10 @@
 # limitations under the License.
 
 # Check for target product
-
-ifeq (pa_titan,$(TARGET_PRODUCT))
+ifeq (pa_sirius,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := pa_xxhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
@@ -29,17 +28,16 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/motorola/titan/full_titan.mk)
+$(call inherit-product, device/sony/sirius/full_sirius.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_titan
-PRODUCT_DEVICE := titan
-PRODUCT_BRAND := motorola
-PRODUCT_MANUFACTURER := motorola
-PRODUCT_MODEL := titan
-
-# Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=titan TARGET_DEVICE=titan
+PRODUCT_NAME := pa_sirius
+PRODUCT_DEVICE := sirius
+PRODUCT_BRAND := sony
+PRODUCT_MANUFACTURER := Sony
+PRODUCT_MODEL := Xperia Z2
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=D6503
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=Sony/D6503/D6503:5.0.2/23.1.A.0.690/814068233:user/release-keys
+PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="D6503-user 5.0.2 23.1.A.0.690 814068233 release-keys"
 
 endif
-
