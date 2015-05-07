@@ -16,7 +16,7 @@ PRODUCT_PACKAGES += \
     busybox
 
 # Include ParanoidOTA
-#ifneq ($(NO_OTA_BUILD),true)
-#    PRODUCT_PACKAGES += \
-#        ParanoidOTA
-#endif
+ifneq ($(NO_OTA_BUILD),true)
+    PRODUCT_PACKAGES += \
+        ParanoidOTA
+endif
