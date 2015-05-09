@@ -65,3 +65,9 @@ PRODUCT_PACKAGES += \
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
 endif
+
+# Backuptool support
+PRODUCT_COPY_FILES += \
+    vendor/pa/prebuilt/system/addon.d/50-backuptool.sh:system/addon.d/50-backuptool.sh \
+    vendor/pa/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/pa/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh
