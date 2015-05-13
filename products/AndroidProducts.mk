@@ -66,6 +66,9 @@ endif
 ifeq (pa_find7s,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_find7s.mk
 endif
+ifeq (pa_ghost,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ghost.mk
+endif
 ifeq (pa_hammerhead,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hammerhead.mk
 endif
