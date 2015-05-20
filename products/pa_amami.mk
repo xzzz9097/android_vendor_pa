@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_honami,$(TARGET_PRODUCT))
+ifeq (pa_amami,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
@@ -28,7 +28,7 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/sony/amami/full_honami.mk)
+$(call inherit-product, device/sony/amami/full_amami.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := pa_amami
