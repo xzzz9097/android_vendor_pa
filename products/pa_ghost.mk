@@ -31,7 +31,14 @@ include vendor/pa/main.mk
 # Inherit device configuration
 $(call inherit-product, device/motorola/ghost/full_ghost.mk)
 
-PRODUCT_RELEASE_NAME := MOTO X
+# Override AOSP build properties
 PRODUCT_NAME := pa_ghost
+PRODUCT_DEVICE := ghost
+PRODUCT_BRAND := motorola
+PRODUCT_MANUFACTURER := motorola
+PRODUCT_MODEL := ghost
+
+# Set build fingerprint / ID / Product Name ect.
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=ghost TARGET_DEVICE=ghost
 
 endif
