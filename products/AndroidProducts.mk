@@ -21,6 +21,9 @@ endif
 ifeq (pa_bacon,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_bacon.mk
 endif
+ifeq (pa_cancro,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_cancro.mk
+endif
 ifeq (pa_condor,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_condor.mk
 endif
