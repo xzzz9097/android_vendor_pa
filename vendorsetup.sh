@@ -46,7 +46,6 @@ add_lunch_combo pa_m8-userdebug
 add_lunch_combo pa_mako-userdebug
 add_lunch_combo pa_maserati-userdebug
 add_lunch_combo pa_xt926-userdebug
-add_lunch_combo pa_moto_msm8960_jbbl-userdebug
 add_lunch_combo pa_moto_msm8960dt-userdebug
 add_lunch_combo pa_n1-userdebug
 add_lunch_combo pa_n5100-userdebug

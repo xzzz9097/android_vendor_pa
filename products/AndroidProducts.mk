@@ -111,9 +111,6 @@ endif
 ifeq (pa_xt926,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_xt926.mk
 endif
-ifeq (pa_moto_msm8960_jbbl,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_moto_msm8960_jbbl.mk
-endif
 ifeq (pa_n1,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_n1.mk
 endif
