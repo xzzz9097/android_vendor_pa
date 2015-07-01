@@ -71,7 +71,7 @@ if [ $ARCH = "64" ]; then
   # Get start time
   res1=$(date +%s.%N)
 
-  echo -e "${cya}Building ${bldcya}AOSPA $VERSION for $DEVICE ${txtrst}";
+  echo -e "${cya}Building ${bldcya}AOSPA-L $VERSION for $DEVICE ${txtrst}";
   echo -e "${bldgrn}Start time: $(date) ${txtrst}"
 
   # Decide what command to execute
